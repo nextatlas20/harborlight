@@ -1,0 +1,48 @@
+{
+  "schema_version": 2,
+  "updated": "2024-11-04",
+  "deprecated": [
+    {
+      "symbol": "legacy_read_csv",
+      "replacement": "read_table",
+      "owner": "ingest-platform",
+      "remove_by": "2.6.0"
+    },
+    {
+      "symbol": "legacy_write_parquet",
+      "replacement": "write_table",
+      "owner": "ingest-platform",
+      "remove_by": "2.6.0"
+    },
+    {
+      "symbol": "coerce_numeric_v1",
+      "replacement": "coerce_numeric",
+      "owner": "typing-quality",
+      "remove_by": "2.5.0"
+    },
+    {
+      "symbol": "normalize_timestamp_naive",
+      "replacement": "normalize_timestamp",
+      "owner": "typing-quality",
+      "remove_by": "2.5.0"
+    },
+    {
+      "symbol": "window_rollup_legacy",
+      "replacement": "window_rollup",
+      "owner": "streaming-core",
+      "remove_by": "2.7.0"
+    },
+    {
+      "symbol": "emit_metrics_legacy",
+      "replacement": "emit_metrics",
+      "owner": "observability",
+      "remove_by": "2.6.0"
+    },
+    {
+      "symbol": "parse_legacy_header",
+      "replacement": "parse_header",
+      "owner": "ingest-platform",
+      "remove_by": "2.8.0"
+    }
+  ]
+}
