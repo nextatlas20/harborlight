@@ -1,22 +1,24 @@
 # Deprecated API Migration Status
 
-Draft register for the 2.3 maintenance line, maintained by hand. Do not cut a
-release from this branch before the register has been reconciled.
+This register lists every call site of a helper recorded in
+`docs/deprecation_registry.json`. The platform team refreshes it before each
+minor release so that squads can plan the removals.
 
 <!-- MIGRATION-TABLE:START -->
 | Call site | Deprecated symbol | Replacement | Owner | Remove by |
 | --- | --- | --- | --- | --- |
 | src/harborlight/io/legacy_reader.py:41 | legacy_read_csv | read_table | ingest-platform | 2.6.0 |
-| src/harborlight/transforms/cleanse.py:21 | normalize_timestamp_naive | normalize_timestamp | typing-quality | 2.5.0 |
 <!-- MIGRATION-TABLE:END -->
 
 ## Coverage
 
 <!-- COVERAGE:START -->
-- Total call sites: 2
-- Call sites by owner: ingest-platform=1, typing-quality=1
+- Total call sites: 1
+- Call sites by owner: ingest-platform=1
 <!-- COVERAGE:END -->
 
 ## Notes
 
-Maintenance-line copy. Superseded by the register on `develop`.
+Call sites already tracked by an open `[migration]` issue are intentionally
+left out of this register. Register a helper before adding new call sites to
+the codebase.
